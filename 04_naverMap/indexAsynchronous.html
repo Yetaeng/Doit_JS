@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기_비동기방식</title>
+    <!-- NAVER 지도 API v3이 로드되는 동안 나머지 웹 사이트를 렌더링하는 비동기 방식으로 사용하려면 다음과 같이 callback 파라미터를 이용해 콜백 함수를 지정합니다. NAVER API v3이 준비되면 지정한 콜백 함수를 호출합니다. -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=01hd7el000"></script>
+</head>
+<!-- 앞서 NAVER 지도 API v3을 비동기 방식으로 로드한 경우 아래와 같이 콜백 함수 내에서 지도를 생성합니다. -->
+<body>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
+    <script type="text/javascript">
+        var map = null;
+
+        function initMap() {
+            map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                zoom: 10
+            });
+        }
+    </script>
+</body>
+</html>

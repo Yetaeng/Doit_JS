@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <!-- 클라이언트 아이디 발급에서 발급받은 ncpClientId를 사용해 NAVER 지도 API v3을 로드 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=아이디"></script>
+</head>
+<body>
+<h1>위도 37.3595704, 경도 127.105399 를 중심으로 높이 400px, 넓이 100%인 지도</h1>
+
+<!-- 웹 페이지에 지도를 삽입할 DOM 요소를 지정  -->
+<!-- 지도를 초기화할 때 MapOptions의 size를 지정하지 않으면, 초기화 시점의 지도 DOM 컨테이너의 크기로 지도 크기를 설정합니다. 이후 setSize 메서드를 이용해 지도 크기를 변경하기 전까지 지도 크기는 고정됩니다. -->
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+// 지도 옵션 설정하기
+// 지도 옵션은 지도를 생성할 때 지도의 속성을 초기화하는 데 사용되며, 객체 리터럴로 만듭니다. 
+var mapOptions = {
+    // LatLng 클래스는 위/경도 좌표를 정의합니다.
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+};
+
+// 지도 생성하기
+// Map 클래스는 지도를 표현하는 클래스
+var map = new naver.maps.Map('map', mapOptions);
+</script>
+</body>
+</html>
