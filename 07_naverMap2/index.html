@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>간단한 지도 표시하기</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=01hd7el000"></script>
+    <style>
+        body {
+            font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+            font-size: 18px;
+        }
+        div, ul {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>이벤트를 적용한 지도</h1>
+        <div id="map" style="width:80%;height:400px;"></div></div>
+    </div>
+
+    <ul>
+        <li>
+            <p><strong>일반 지도 유형 id</strong>로 일반 이미지 지도를 보여주는 지도 유형</p>
+            <div id="map1" style="width:80%;height:400px;"></div><br>
+        </li>
+        <li>
+            <p><strong>지형도 유형 id</strong>로 지형의 높낮이를 함께 보여주는 지도 유형</p>
+            <div id="map2" style="width:80%;height:400px;"></div><br>
+        </li>
+        <li>
+            <p><strong>위성 지도 유형 id</strong>로 위성 지도 유형 id로 위성 이미지 지도를 보여주는 지도 유형</p>
+            <div id="map3" style="width:80%;height:400px;"></div><br>
+        </li>
+        <li>
+            <p><strong>겹쳐보기 지도 유형 id</strong>로 위성 이미지 지도 위에 주요 도로와 주기를 함께 보여주는 지도 유형</p>
+            <div id="map4" style="width:80%;height:400px;"></div><br>
+        </li>
+    </ul>
+<script src="./main.js"></script>
+<script src="./event.js"></script>
+</body>
+</html>
