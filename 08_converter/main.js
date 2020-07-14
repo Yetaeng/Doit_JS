@@ -1,3 +1,5 @@
+// 응용해서 인치 ↔ 센티미터’나, ‘m2 ↔ 평 단위 변환기로도 만들 수 있음
+
 let state = true;
 let s_unit = document.querySelector('#s-unit');
 let t_unit = document.querySelector('#t-unit');
